@@ -87,3 +87,8 @@ body {
 .user-list li:not(:last-of-type) {
     border-bottom: 1px solid #eee;
 }
+
+/* to hide other lists on filter search */
+.user-list li.hide {
+    display: none;
+}
