@@ -4,6 +4,10 @@ const listItems = []
 
 getData()
 
+filter.addEventListener("input", (event) => {
+    filterData(event.target.value)
+})
+
 async function getData() {
     const res = await fetch('https://randomuser.me/api/?results=20')
 
@@ -36,7 +40,7 @@ function filterData(searchTerm) {
         if (item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
             item.classList.remove('hide')
         } else {
-            listItems.classList.add('hide')
+            item.classList.add('hide')
         }
     })
 }
